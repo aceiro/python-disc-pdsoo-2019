@@ -1,10 +1,11 @@
-from services import country_services
-from model import country_class
+from services.country_services import *
+from model.country_class import *
 
 # print(country_services.CountryServices.retrieveBrazilCountryByNameRaw(None))
 # print(country_services.CountryServices.retrieveBrazilCountryByNameFormated(None))
-countryName   = country_services.CountryServices.retrieveBrazilName(None)
-countryBrazil = country_class.Country(countryName, None )
+services = CountryServices
+countryName   = services.retrieveBrazilName(None)
+countryBrazil = Country(countryName, None )
 
 countryBrazil.printCountry()
 
